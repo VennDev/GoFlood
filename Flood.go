@@ -287,25 +287,29 @@ func getUserAgent() string {
 		
 		webkit := strconv.Itoa(rand.Intn(599-500) + 500)
 
-		uwu := strconv.Itoa(rand.Intn(99)) + ".0" + strconv.Itoa(rand.Intn(9999)) + "." + strconv.Itoa(rand.Intn(999))
+		sometext := strconv.Itoa(rand.Intn(99)) + ".0" + strconv.Itoa(rand.Intn(9999)) + "." + strconv.Itoa(rand.Intn(999))
 		
-		return "Mozilla/5.0 (" + os + ") AppleWebKit/" + webkit + ".0 (KHTML, like Gecko) Chrome/" + uwu + " Safari/" + webkit
+		return "Mozilla/5.0 (" + os + ") AppleWebKit/" + webkit + ".0 (KHTML, like Gecko) Chrome/" + sometext + " Safari/" + webkit
 	
-		} else if browser == "ie" {
+	} else if browser == "ie" {
 
-		uwu := strconv.Itoa(rand.Intn(99)) + ".0"
+		sometext := strconv.Itoa(rand.Intn(99)) + ".0"
 		engine := strconv.Itoa(rand.Intn(99)) + ".0"
 		option := rand.Intn(1)
 
 		var token string
 
 		if option == 1 {
+
 			token = choice6[rand.Intn(len(choice6)-1)] + "; "
+
 		} else {
+
 			token = ""
+			
 		}
 
-		return "Mozilla/5.0 (compatible; MSIE " + uwu + "; " + os + "; " + token + "Trident/" + engine + ")"
+		return "Mozilla/5.0 (compatible; MSIE " + sometext + "; " + os + "; " + token + "Trident/" + engine + ")"
 	}
 
 	return spider[rand.Intn(len(spider))]
