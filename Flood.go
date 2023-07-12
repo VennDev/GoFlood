@@ -316,6 +316,8 @@ func getUserAgent() string {
 }
 
 var (
+	
+	start = make(chan bool)
 
 	host = ""
 
@@ -326,8 +328,6 @@ var (
 	mode = ""
 
 	character = "asdfghjklqwertyuiopzxcvbnmASDFGHJKLQWERTYUIOPZXCVBNM"
-
-	start = make(chan bool)
 
 	key string
 
